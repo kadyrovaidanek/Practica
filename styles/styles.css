@@ -1,0 +1,245 @@
+main {
+  background-color: #90b4c2a7;
+}
+
+main section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px;
+  color: #fff;
+  margin: 50px;
+}
+
+.content {
+  position: relative;
+  width: 1150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .image {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.content .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content .text-box {
+  z-index: 222;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transform: translate(-80px, 50px);
+}
+
+.content .text-box h3 {
+  font-size: 2em;
+}
+
+.sec-01 {
+  background-color:#003f7da2;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+.sec-02{
+  background-color:aliceblue;
+  color: #003366;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+.sec-02 .image{
+  width: 700px;
+  height: 350px;
+ 
+}
+
+.sec-02 h3{
+  font-size: 24px;
+}
+
+.sec-03 {
+  background-color: #003f7da2;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+  text-align: center; /* Центрирование текста */
+  padding-top: 40px; /* Отступ сверху для заголовка */
+}
+.sec-03 h3{
+  font-size: 24px;
+
+}
+
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sec-03 ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Убираем отступы у самого списка */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Разделение на две колонки */
+  gap: 2rem; /* Расстояние между колонками */
+}
+
+.sec-03 li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+/* Цвет для элементов 1 и 2 */
+.sec-03 li:nth-child(1),
+.sec-03 li:nth-child(4) {
+  background-color: rgb(100, 149, 192); /* Цвет для 1 и 2 */
+}
+
+/* Цвет для элементов 3 и 4 */
+.sec-03 li:nth-child(3),
+.sec-03 li:nth-child(2) {
+  background-color: #003366; /* Цвет для 3 и 4 */
+}
+.sec-03 li::before {
+  counter-increment: list-item;
+  content: counter(list-item);
+  font-size: 16px;
+  font-weight: 500;
+  width: 2em;
+  height: 2em;
+  background: rgb(26, 20, 20);
+  flex: 0 0 auto;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-03 li:nth-child(even) {
+	flex-direction: row-reverse;
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+.sec-04 {
+  background-color:#003366;
+  color: #003366;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+
+}
+
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+.sec-04  {
+  background-color: aliceblue; /* Slightly lighter blue background for list items */
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #003366; /* Light cyan color for text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 60px;
+}
+
+.sec-04 h3 {
+  font-size: 24px; /* Размер шрифта для заголовка */
+  margin-bottom: 20px; /* Отступ снизу для заголовка */
+  text-align: center; /* Центровка заголовка */
+  color: #003366; /* Цвет текста */
+}
+.sec-04 p {
+margin: 0;
+line-height: 1.6;
+}
+
+.sec-04 ul {
+  display: grid; /* Using CSS Grid */
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 20px; /* Space between items */
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+  grid-auto-rows: min-content; /* Ensure rows fit the content */
+  grid-auto-flow: dense; /* Fill empty grid cells */
+}
+.sec-04 li:nth-child(1),
+.sec-04 li:nth-child(4){
+  grid-column: 1; /* First column */
+}
+
+.sec-04 li:nth-child(2),
+.sec-04 li:nth-child(5) {
+  grid-column: 2;
+}
+.sec-04 li:nth-child(3) {
+  grid-column: 3;
+}
+
+
+.sec-04 li {
+--stop: calc(100% / var(--length) * var(--i));
+--h: 210; /* Оттенок синего */
+--l: 50%; /* Яркость для первого цвета */
+--l2: 80%; /* Яркость для второго цвета */
+--c1: hsl(var(--h), 70%, var(--l)); /* Первый цвет градиента */
+--c2: hsl(var(--h), 70%, var(--l2)); /* Второй цвет градиента */
+
+position: relative;
+counter-increment: list;
+max-width: 45rem;
+margin: 2rem auto;
+padding: 2rem 1rem 1rem;
+box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+border-radius: 0.25rem;
+overflow: hidden;
+background-color: white;
+}
+
+.sec-04 li::before {
+content: '';
+display: block;
+width: 100%;
+height: 1rem;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+}
+
