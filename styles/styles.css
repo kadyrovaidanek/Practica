@@ -1,6 +1,37 @@
 main {
   background-color: #90b4c2a7;
 }
+.header-title {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Set an appropriate height for the block */
+  overflow: hidden;
+}
+
+.header-title video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.header-title h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 2;
+  color: #ffffff; /* Text color */
+  border-radius: 10px; /* Rounded corners */
+}
 
 main section {
   position: relative;
@@ -15,9 +46,12 @@ main section {
 .content {
   position: relative;
   width: 1150px;
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  max-width: 100%; /* Ограничение ширины контейнера */
+  box-sizing: border-box; /* Учет внутренних отступов при расчете ширины */
+  overflow: hidden; /* Обрезать содержимое, выходящее за границы контейнера */
 }
 
 .content .image {
@@ -53,27 +87,26 @@ main section {
 }
 
 .sec-01 {
-  background-color:#003f7da2;
+  background-color: #003f7da2;
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
   border-radius: 5px;
 }
-.sec-02{
-  background-color:aliceblue;
+.sec-02 {
+  background-color: aliceblue;
   color: #003366;
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
   border-radius: 5px;
 }
-.sec-02 .image{
+.sec-02 .image {
   width: 700px;
   height: 350px;
- 
 }
 
-.sec-02 h3{
+.sec-02 h3 {
   font-size: 24px;
 }
 
@@ -86,9 +119,8 @@ main section {
   text-align: center; /* Центрирование текста */
   padding-top: 40px; /* Отступ сверху для заголовка */
 }
-.sec-03 h3{
+.sec-03 h3 {
   font-size: 24px;
-
 }
 
 .wrapper {
@@ -141,13 +173,13 @@ main section {
   align-items: center;
 }
 .sec-03 li:nth-child(even) {
-	flex-direction: row-reverse;
-	margin-right: -2rem;
-	margin-left: 2rem;
+  flex-direction: row-reverse;
+  margin-right: -2rem;
+  margin-left: 2rem;
 }
 
 .sec-04 {
-  background-color:#003366;
+  background-color: #003366;
   color: #003366;
   margin-top: 50px;
   margin-left: 50px;
@@ -157,7 +189,6 @@ main section {
 .timeline {
   position: relative;
   max-width: 1200px;
-
 }
 
 .container {
@@ -167,7 +198,7 @@ main section {
   animation: movedown 1s linear forwards;
   opacity: 0;
 }
-.sec-04  {
+.sec-04 {
   background-color: aliceblue; /* Slightly lighter blue background for list items */
   border-radius: 10px;
   padding: 0;
@@ -185,8 +216,8 @@ main section {
   color: #003366; /* Цвет текста */
 }
 .sec-04 p {
-margin: 0;
-line-height: 1.6;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .sec-04 ul {
@@ -200,7 +231,7 @@ line-height: 1.6;
   grid-auto-flow: dense; /* Fill empty grid cells */
 }
 .sec-04 li:nth-child(1),
-.sec-04 li:nth-child(4){
+.sec-04 li:nth-child(4) {
   grid-column: 1; /* First column */
 }
 
@@ -212,34 +243,36 @@ line-height: 1.6;
   grid-column: 3;
 }
 
-
 .sec-04 li {
---stop: calc(100% / var(--length) * var(--i));
---h: 210; /* Оттенок синего */
---l: 50%; /* Яркость для первого цвета */
---l2: 80%; /* Яркость для второго цвета */
---c1: hsl(var(--h), 70%, var(--l)); /* Первый цвет градиента */
---c2: hsl(var(--h), 70%, var(--l2)); /* Второй цвет градиента */
+  --stop: calc(100% / var(--length) * var(--i));
+  --h: 210; /* Оттенок синего */
+  --l: 50%; /* Яркость для первого цвета */
+  --l2: 80%; /* Яркость для второго цвета */
+  --c1: hsl(var(--h), 70%, var(--l)); /* Первый цвет градиента */
+  --c2: hsl(var(--h), 70%, var(--l2)); /* Второй цвет градиента */
 
-position: relative;
-counter-increment: list;
-max-width: 45rem;
-margin: 2rem auto;
-padding: 2rem 1rem 1rem;
-box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
-border-radius: 0.25rem;
-overflow: hidden;
-background-color: white;
+  position: relative;
+  counter-increment: list;
+  max-width: 45rem;
+  margin: 2rem auto;
+  padding: 2rem 1rem 1rem;
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: white;
 }
 
 .sec-04 li::before {
-content: '';
-display: block;
-width: 100%;
-height: 1rem;
-position: absolute;
-top: 0;
-left: 0;
-background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--c1) var(--stop),
+    var(--c2) var(--stop)
+  );
 }
-
